@@ -1,0 +1,147 @@
+#flash-sales {
+    width: 100%;
+    padding: 50px;
+
+    .head-of-sale {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding-bottom: 15px;
+        color: var(--adding-color);
+
+        .color {
+            width: 20px;
+            height: 40px;
+            background-color: var(--adding-color);
+            border-radius: 4px;
+        }
+    }
+
+    .date {
+        display: flex;
+        gap: 100px;
+
+        .days {
+            display: flex;
+
+            p {
+                width: 90px;
+            }
+        }
+
+        .time {
+            display: flex;
+
+            p {
+                width: 50px;
+            }
+
+            span {
+                width: 50px;
+                color: var(--adding-color);
+                font-weight: bold;
+            }
+        }
+    }
+
+    .flashWrapper {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        padding-top: 40px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .flashCard {
+            width: 20%;
+            height: 350px;
+            &:hover{
+                .fa-basket-shopping,
+                .fa-eye,
+                .fa-heart{
+                    opacity: 1!important;
+                    bottom: 0!important;
+                    transition: 0.4s;
+                }
+            }
+
+            .flashImg {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(250, 250, 250);
+                height: 70%;
+                position: relative;
+
+                .fa-basket-shopping,
+                .fa-eye,
+                .fa-heart {
+                    cursor: pointer;
+                    position: absolute;
+                    bottom: -40px;
+                    font-size: 25px;
+                    padding: 5px;
+                    background-color: rgb(224, 224, 224);
+                    border-radius: 50%;
+                    transition: 0.4s;
+                    color: var(--adding-color);
+                    opacity: 0;
+                    
+
+                    &:hover {
+                        color: white;
+                        background-color: var(--adding-color);
+                        transition: 0.4s;
+                    }
+                }
+
+                .fa-basket-shopping {
+                    left: 25%;
+                }
+
+                .fa-eye {
+                    left: 44%;
+                }
+
+                .fa-heart {
+                    right: 25%;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .flashCardTexts {
+                text-align: center;
+                line-height: 1.5;
+
+                p {
+                    // color: var(--adding-color);
+                    font-size: 20px;
+                }
+
+                .newPrice {
+                    color: var(--adding-color);
+                    margin-right: 10px;
+                }
+
+                .oldPrice {
+                    text-decoration: line-through;
+                    color: gray;
+                }
+
+                .rating {
+                    color: goldenrod;
+
+                    span {
+                        color: gray;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+
+    }
+}

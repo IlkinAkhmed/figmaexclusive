@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import apple from '../../../public/img/headerimgapple.png'
+import iphone from '../../../public/img/headerlogo.png'
+import { Link } from 'react-router-dom'
 import "./index.scss";
 
 function Header() {
@@ -50,7 +53,19 @@ function Header() {
           <li>Groceries & Pets</li>
           <li>Health & Beauty</li>
         </ul>
-        <div className="slider"></div>
+        <div className="slider">
+          <div className="texts">
+            <div className="appleLogo">
+              <img src={apple} alt="" />
+              Iphone 14 series
+            </div>
+            <h1>Up to 10 % off Voucher</h1>
+            <Link  className="shop"><span>Shop Now</span> <i className="fa-solid fa-arrow-right"></i></Link>
+          </div>
+          <div className="iphoneImg">
+              <img src={iphone} alt="" />
+          </div>
+        </div>
       </div>
     </header>
   );

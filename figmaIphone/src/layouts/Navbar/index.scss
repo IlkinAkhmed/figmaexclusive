@@ -1,0 +1,160 @@
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid rgb(171, 171, 171);
+  .nav-inner {
+    width: 80%;
+    margin: auto;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ul {
+      width: 35%;
+      display: flex;
+      justify-content: space-between;
+      .navlink {
+        color: black;
+        padding: 8px 5px;
+        border: 1px solid transparent;
+        font-weight: 600;
+        &:hover {
+          border: 1px solid gray;
+          border-radius: 5px;
+          border-color: rgb(53, 53, 211);
+        }
+      }
+      .active {
+        border: 1px solid gray;
+        border-radius: 5px;
+        border-color: rgb(53, 53, 211);
+      }
+    }
+    .search-side {
+      display: flex;
+      align-items: center;
+      .search {
+        display: flex;
+        align-items: center;
+        padding: 10px 5px;
+        gap: 20px;
+        background-color: rgb(227, 227, 227);
+        position: relative;
+        .mobileSearch {
+          transform: scale(0);
+          display: none;
+          transition: 0.5s;
+          padding: 5px;
+          height: 30px;
+          position: absolute;
+          left: -100px;
+          width: 215px;
+          bottom: -30px;
+          background-color: transparent;
+          border-radius: 5px;
+          &::placeholder {
+            color: rgb(82, 82, 82);
+          }
+        }
+        .desktopSearch {
+          border: none;
+          outline: none;
+          background-color: transparent;
+          &::placeholder {
+            color: rgb(82, 82, 82);
+          }
+        }
+        i {
+          cursor: pointer;
+        }
+        .second{
+            display: none;
+        }
+      }
+      .shopping-logos {
+        display: flex;
+        i {
+          cursor: pointer;
+          font-size: 20px;
+          margin-left: 25px;
+          transition: 0.3s;
+          &:hover {
+            color: rgb(53, 53, 211);
+            transition: 0.3s;
+          }
+        }
+        .fa-bars {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.search-active {
+  transform: scale(1)!important;
+  transition: 0.5s;
+}
+@media screen and (max-width: 489px) {
+  nav {
+    .nav-inner {
+      width: 95%;
+      ul {
+        display: none;
+      }
+      .search-side {
+        .mobileSearch{
+            display: block!important;
+        }
+        .search {
+          background-color: transparent;
+          .desktopSearch {
+            display: none;
+          }
+          .second{
+            display: block!important;
+          }
+          .first{
+            display: none;
+          }
+        }
+      }
+    }
+    i {
+      margin-left: 10px !important;
+    }
+    .fa-bars {
+      display: block !important;
+    }
+  }
+}
+
+@media screen and (min-width: 490px) and (max-width: 768px) {
+  nav {
+    .nav-inner {
+      width: 95%;
+      ul {
+        display: none;
+      }
+    }
+    .fa-bars {
+      display: block !important;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  nav {
+    .nav-inner {
+      width: 90%;
+      ul {
+        display: none;
+      }
+    }
+    .fa-bars {
+      display: block !important;
+    }
+  }
+}

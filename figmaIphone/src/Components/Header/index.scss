@@ -1,0 +1,44 @@
+header {
+  padding: 150px 0 50px 0;
+  .header-inner {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .accardion {
+      width: 15%;
+      line-height: 1.5;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .itemOpener {
+        position: relative;
+        cursor: pointer;
+
+        .fa-angle-right, .fa-angle-up {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+        .accardionItem{
+            height: 0;
+            overflow: hidden;
+            transition:  0.3s;
+            color: gray;
+        }
+      }
+    }
+    .slider {
+      width: 78%;
+      background-color: black;
+      height: 400px;
+    }
+  }
+}
+.active{
+    height:70px!important;
+    transition: 0.3s;
+}

@@ -1,6 +1,7 @@
 #flash-sales {
     width: 100%;
     padding: 50px;
+    text-align: center;
 
     .head-of-sale {
         display: flex;
@@ -44,23 +45,31 @@
         }
     }
 
-    .flashWrapper {
+
+
+    swiper-container {
+        text-align: center;
+        flex-wrap: wrap;
+        font-size: 18px;
+        justify-content: center;
+        align-items: center;
         width: 100%;
+        height: 100%;
         display: flex;
         gap: 20px;
         padding-top: 40px;
-        flex-wrap: wrap;
-        justify-content: center;
 
-        .flashCard {
-            width: 20%;
+        swiper-slide {
+            width: 20% !important;
             height: 350px;
-            &:hover{
+
+            &:hover {
+
                 .fa-basket-shopping,
                 .fa-eye,
-                .fa-heart{
-                    opacity: 1!important;
-                    bottom: 0!important;
+                .fa-heart {
+                    opacity: 1 !important;
+                    bottom: 0 !important;
                     transition: 0.4s;
                 }
             }
@@ -86,7 +95,7 @@
                     transition: 0.4s;
                     color: var(--adding-color);
                     opacity: 0;
-                    
+
 
                     &:hover {
                         color: white;
@@ -118,7 +127,6 @@
                 line-height: 1.5;
 
                 p {
-                    // color: var(--adding-color);
                     font-size: 20px;
                 }
 
@@ -144,4 +152,5 @@
         }
 
     }
+
 }

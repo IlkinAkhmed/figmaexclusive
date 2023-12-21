@@ -1,0 +1,147 @@
+#selling {
+    width: 100%;
+    padding: 50px;
+
+    .head-of-selling {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding-bottom: 15px;
+        color: var(--adding-color);
+
+        .color {
+            width: 20px;
+            height: 40px;
+            background-color: var(--adding-color);
+            border-radius: 4px;
+        }
+    }
+
+    .selling-head {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            background-color: var(--adding-color);
+            color: white;
+            border-radius: 8px;
+            border: none;
+            transition: 0.3s;
+            padding: 10px 20px;
+
+            &:hover {
+                background-color: white;
+                color: var(--adding-color);
+                border: 1px solid var(--adding-color);
+                transition: 0.3s;
+            }
+        }
+    }
+
+    .sellingWrapper {
+        text-align: center;
+        flex-wrap: wrap;
+        font-size: 18px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        gap: 20px;
+        padding-top: 40px;
+
+        .sellingCard {
+            width: 23% !important;
+            height: 350px;
+
+            &:hover {
+
+                .fa-basket-shopping,
+                .fa-eye,
+                .fa-heart {
+                    opacity: 1 !important;
+                    bottom: 0 !important;
+                    transition: 0.4s;
+                }
+            }
+
+            .sellingImg {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(250, 250, 250);
+                height: 70%;
+                position: relative;
+
+                .fa-basket-shopping,
+                .fa-eye,
+                .fa-heart {
+                    cursor: pointer;
+                    position: absolute;
+                    bottom: -40px;
+                    font-size: 25px;
+                    padding: 5px;
+                    background-color: rgb(224, 224, 224);
+                    border-radius: 50%;
+                    transition: 0.4s;
+                    color: var(--adding-color);
+                    opacity: 0;
+
+
+                    &:hover {
+                        color: white;
+                        background-color: var(--adding-color);
+                        transition: 0.4s;
+                    }
+                }
+
+                .fa-basket-shopping {
+                    left: 25%;
+                }
+
+                .fa-eye {
+                    left: 44%;
+                }
+
+                .fa-heart {
+                    right: 25%;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .sellingCardTexts {
+                text-align: center;
+                line-height: 1.5;
+
+                p {
+                    font-size: 20px;
+                }
+
+                .newPrice {
+                    color: var(--adding-color);
+                    margin-right: 10px;
+                }
+
+                .oldPrice {
+                    text-decoration: line-through;
+                    color: gray;
+                }
+
+                .rating {
+                    color: goldenrod;
+
+                    span {
+                        color: gray;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+
+    }
+}

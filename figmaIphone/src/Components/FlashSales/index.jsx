@@ -2,24 +2,15 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch } from "react-redux"
 import './index.scss'
 import { addToBasket } from '../../Slices/basketRedux'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+import useFetch from '../../hooks/usefetch'
 
 
 
 
 function FlashSales() {
-
-
-  const [products, setProducts] = useState([])
-  const [isLoading, setIsLoading] = useState(false)
-  function FetchData() {
-    fetch('http://localhost:3000/exclusive')
-      .then(res => res.json())
-      .then(data => setProducts(data))
-  }
-  useEffect(() => {
-    FetchData()
-    setIsLoading(!isLoading)
-  }, [])
+  const { products, isLoading } = useFetch('exclusive')
 
 
   const dispatch = useDispatch()
@@ -52,10 +43,11 @@ function FlashSales() {
           </div>
         </div>
       </div>
-      <div className="flashWrapper">
+      <swiper-container class="mySwiper" space-between={30}
+      >
         {!isLoading ? <h1>Loading...</h1> :
           products && products.map(item => (
-            <div className="flashCard">
+            <swiper-slide key={item.id}>
               <div className="flashImg">
                 <i onClick={() => dispatch(addToBasket({ ...item, count: 1, }))} className='fa-solid fa-basket-shopping'></i>
                 <i className='fa-solid fa-eye'></i>
@@ -75,10 +67,12 @@ function FlashSales() {
                   <span>(88)</span>
                 </div>
               </div>
-            </div>
-
+            </swiper-slide>
           ))}
-      </div>
+      </swiper-container>
+
+      <button style={{ borderRadius: "8px", border: "none", padding: "10px 25px", fontWeight: "bold", background: "var(--adding-color)", color: "white" }}>VIEW ALL PRODUCTS</button>
+
     </section>
   )
 }

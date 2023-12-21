@@ -5,7 +5,6 @@ import { useSelector } from 'react-redux';
 function Basket() {
 
   const basketArr = useSelector(state => state.basket.value)
-  console.log('budu', basketArr);
 
   return (
     <div className='basket'>

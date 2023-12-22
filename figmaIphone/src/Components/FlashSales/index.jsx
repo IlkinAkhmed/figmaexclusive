@@ -48,6 +48,9 @@ function FlashSales() {
         {!isLoading ? <h1>Loading...</h1> :
           products && products.map(item => (
             <swiper-slide key={item.id}>
+              <span className="discount">
+                -{item.abate}%
+              </span>
               <div className="flashImg">
                 <i onClick={() => dispatch(addToBasket({ ...item, count: 1, }))} className='fa-solid fa-basket-shopping'></i>
                 <i className='fa-solid fa-eye'></i>

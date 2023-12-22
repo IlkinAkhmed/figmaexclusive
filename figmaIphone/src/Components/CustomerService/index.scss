@@ -1,0 +1,20 @@
+#customer {
+    width: 100%;
+
+    .customerContainer {
+        width: 80%;
+        margin: auto;
+        padding: 50px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .card{
+            text-align: center;
+            line-height: 2;
+            width: 32%;
+            img{
+                width: 20%;
+            }
+        }
+    }
+}

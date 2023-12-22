@@ -23,7 +23,7 @@ nav {
         border: 1px solid transparent;
         font-weight: 600;
         &:hover {
-          border: 1px solid gray;
+          border: 1px solid rgb(225, 225, 225);
           border-radius: 5px;
           border-color: rgb(53, 53, 211);
         }
@@ -31,7 +31,7 @@ nav {
       .active {
         border: 1px solid gray;
         border-radius: 5px;
-        border-color: rgb(53, 53, 211);
+        box-shadow: 2px 2px 20px;
       }
     }
     .search-side {

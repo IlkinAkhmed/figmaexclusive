@@ -7,6 +7,7 @@ import Contact from "./pages/ContactPage";
 import Home from "./pages/HomePage";
 import Sign_up from "./pages/Sign-upPage";
 import Wishlist from "./pages/Wishlist";
+import Login from "./pages/LoginPage";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/sign-up" element={<Sign_up />} />
           <Route path="/basket" element={<Basket />} />
           <Route path="/wishlist" element={<Wishlist />} />
+          <Route path="/login" element={<Login />} />
         </Route>
       </Routes>
     </>

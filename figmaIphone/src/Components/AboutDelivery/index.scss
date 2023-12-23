@@ -1,0 +1,23 @@
+#delivery {
+    width: 100%;
+    padding: 50px 100px;
+
+    .deliveryContainer {
+        width: 80%;
+        margin: auto;
+        padding: 50px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .deliveryCard {
+            text-align: center;
+            line-height: 2;
+            width: 32%;
+
+            img {
+                width: 20%;
+            }
+        }
+    }
+}

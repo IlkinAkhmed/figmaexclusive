@@ -1,7 +1,7 @@
 import React from 'react'
 import './index.scss'
-import pes from "../../../public/img/pes.png";
-import women from "../../../public/img/women.png";
+import pes5 from "../../../public/img/pes5.png";
+import womennew from "../../../public/img/womennew.png";
 import speaker from "../../../public/img/speakers.png";
 import perfume from "../../../public/img/perfume.png";
 import { Link } from 'react-router-dom';
@@ -17,7 +17,7 @@ function Arrival() {
       <h2>New Arrival</h2>
       <div className="arrivalWrapper">
         <div className="arrivalLeft">
-          <img src={pes} className='bgImg' alt="" />
+          <img src={pes5} className='bgImg' alt="" />
           <div className="playstaiotn">
             <h2>PlayStation 5</h2>
             <p>Black and White version of the PS5 coming out on sale</p>
@@ -27,7 +27,7 @@ function Arrival() {
         </div>
         <div className="arrivalRight">
           <div className="collections">
-            <img src={women} className='WomenBgImg' alt="" />
+            <img src={womennew} className='WomenBgImg' alt="" />
             <div className="playstaiotn">
               <h2>Women Collections</h2>
               <p>Featured woman collections that give you another vibe.</p>

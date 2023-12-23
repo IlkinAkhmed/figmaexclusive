@@ -21,6 +21,10 @@
     .date {
         display: flex;
         gap: 100px;
+        align-items: center;
+        h2{
+            font-size: 30px;
+        }
 
         .days {
             display: flex;
@@ -31,6 +35,8 @@
         }
 
         .time {
+            font-weight: bold;
+            font-size: 40px;
             display: flex;
 
             p {
@@ -75,7 +81,8 @@
                     transition: 0.4s;
                 }
             }
-            .discount{
+
+            .discount {
                 cursor: pointer;
                 position: absolute;
                 font-size: 13px;

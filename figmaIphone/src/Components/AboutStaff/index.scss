@@ -1,0 +1,41 @@
+#staff {
+    width: 100%;
+    padding: 50px 0;
+
+    .staffWrapper {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+        .staffCard {
+            width: 30%;
+            height: 500px;
+            text-align: center;
+
+            .img {
+                width: 100%;
+                height: 85%;
+                text-align: center;
+                background-color: rgb(232, 232, 232);
+
+                img {
+                    width: 80%;
+                    height: 100%;
+                }
+            }
+
+            .staffTexts {
+                line-height: 1.5;
+
+                i {
+                    cursor: pointer;
+                    font-size: 20px;
+                    margin-right: 20px;
+                }
+            }
+        }
+
+    }
+}

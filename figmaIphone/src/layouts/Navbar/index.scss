@@ -6,6 +6,7 @@ nav {
   border-bottom: 1px solid rgb(171, 171, 171);
   background-color: white;
   z-index: 5;
+
   .nav-inner {
     width: 80%;
     margin: auto;
@@ -13,30 +14,35 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     ul {
       width: 35%;
       display: flex;
       justify-content: space-between;
+
       .navlink {
         color: black;
         padding: 8px 5px;
         border: 1px solid transparent;
         font-weight: 600;
+
         &:hover {
           border: 1px solid rgb(225, 225, 225);
           border-radius: 5px;
-          border-color: rgb(53, 53, 211);
+          border-color: var(--adding-color);
         }
       }
-      .active {
-        border: 1px solid gray;
+
+      .navlink.active {
+        border: 1px solid var(--adding-color);
         border-radius: 5px;
-        box-shadow: 2px 2px 20px;
       }
     }
+
     .search-side {
       display: flex;
       align-items: center;
+
       .search {
         display: flex;
         align-items: center;
@@ -44,6 +50,7 @@ nav {
         gap: 20px;
         background-color: rgb(227, 227, 227);
         position: relative;
+
         .mobileSearch {
           transform: scale(0);
           display: none;
@@ -56,37 +63,46 @@ nav {
           bottom: -30px;
           background-color: transparent;
           border-radius: 5px;
+
           &::placeholder {
             color: rgb(82, 82, 82);
           }
         }
+
         .desktopSearch {
           border: none;
           outline: none;
           background-color: transparent;
+
           &::placeholder {
             color: rgb(82, 82, 82);
           }
         }
+
         i {
           cursor: pointer;
         }
-        .second{
-            display: none;
+
+        .second {
+          display: none;
         }
       }
+
       .shopping-logos {
         display: flex;
+
         i {
           cursor: pointer;
           font-size: 20px;
           margin-left: 25px;
           transition: 0.3s;
+
           &:hover {
             color: rgb(53, 53, 211);
             transition: 0.3s;
           }
         }
+
         .fa-bars {
           display: none;
         }
@@ -96,37 +112,46 @@ nav {
 }
 
 .search-active {
-  transform: scale(1)!important;
+  transform: scale(1) !important;
   transition: 0.5s;
 }
+
 @media screen and (max-width: 489px) {
   nav {
     .nav-inner {
       width: 95%;
+
       ul {
         display: none;
       }
+
       .search-side {
-        .mobileSearch{
-            display: block!important;
+        .mobileSearch {
+          display: block !important;
         }
+
         .search {
           background-color: transparent;
+
           .desktopSearch {
             display: none;
           }
-          .second{
-            display: block!important;
+
+          .second {
+            display: block !important;
           }
-          .first{
+
+          .first {
             display: none;
           }
         }
       }
     }
+
     i {
       margin-left: 10px !important;
     }
+
     .fa-bars {
       display: block !important;
     }
@@ -137,10 +162,12 @@ nav {
   nav {
     .nav-inner {
       width: 95%;
+
       ul {
         display: none;
       }
     }
+
     .fa-bars {
       display: block !important;
     }
@@ -151,10 +178,12 @@ nav {
   nav {
     .nav-inner {
       width: 90%;
+
       ul {
         display: none;
       }
     }
+
     .fa-bars {
       display: block !important;
     }

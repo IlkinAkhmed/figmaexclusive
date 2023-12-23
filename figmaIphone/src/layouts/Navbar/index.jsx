@@ -17,14 +17,14 @@ function Navbar() {
           </div>
           <ul>
             <li>
-              <NavLink className={"navlink"} activeClassName="active" to={"/"}>
+              <NavLink className={"navlink"} to={"/"}>
                 Home
               </NavLink>
             </li>
             <li>
               <NavLink
                 className={"navlink"}
-                activeClassName="active"
+
                 to={"/contact"}
               >
                 Contact
@@ -33,7 +33,7 @@ function Navbar() {
             <li>
               <NavLink
                 className={"navlink"}
-                activeClassName="active"
+
                 to={"/about"}
               >
                 About
@@ -42,7 +42,7 @@ function Navbar() {
             <li>
               <NavLink
                 className={"navlink"}
-                activeClassName="active"
+
                 to={"/sign-up"}
               >
                 Sign-up
@@ -57,18 +57,16 @@ function Navbar() {
                 placeholder="What are you looking for?"
               />
               <input
-                className={`mobileSearch ${
-                  isSearchOpen ? "search-active" : ""
-                }`}
+                className={`mobileSearch ${isSearchOpen ? "search-active" : ""
+                  }`}
                 type="text"
                 placeholder="What are you looking for?"
               />
               <i className="first fa-solid fa-magnifying-glass"></i>
               <i
                 onClick={() => setIsSearchOpen(!isSearchOpen)}
-                className={`second fa-solid ${
-                  isSearchOpen ? "fa-xmark" : "fa-magnifying-glass"
-                }`}
+                className={`second fa-solid ${isSearchOpen ? "fa-xmark" : "fa-magnifying-glass"
+                  }`}
               ></i>
             </div>
             <div className="shopping-logos">
@@ -81,7 +79,7 @@ function Navbar() {
                 to={"/wishlist"}
                 className="fa-solid fa-cart-shopping"
               ></i>
-              <i onClick={()=>setIsNavOpen(!isNavOpen)} className="fa-solid fa-bars"></i>
+              <i onClick={() => setIsNavOpen(!isNavOpen)} className="fa-solid fa-bars"></i>
             </div>
           </div>
         </div>

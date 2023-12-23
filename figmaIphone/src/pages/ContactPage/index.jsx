@@ -3,7 +3,9 @@ import './index.scss'
 
 function Contact() {
   return (
-    <div id='contact'>Contact</div>
+    <div id='contact'>
+      
+    </div>
   )
 }
 

@@ -1,26 +1,202 @@
 .basket {
-    padding: 200px 0;
+    padding: 200px 100px;
     width: 100%;
 
-    .basketWrapper {
-        display: flex;
-        width: 60%;
-        flex-wrap: wrap;
-        margin: auto;
+    .basketContainer {
+        padding: 0 20px;
 
-        .basketCard {
-            width: 100%;
+        .productDetails {
             display: flex;
+            width: 90%;
+            margin: auto;
+            justify-content: space-between;
+
+        }
+
+        .basketProduct {
+            padding: 20px 0;
+            display: flex;
+            width: 100%;
+            margin: auto;
+            justify-content: space-between;
             align-items: center;
 
-            img {
-                width: 50%;
-
+            &:hover .fa-xmark {
+                opacity: 1 !important;
+                transition: 0.5s;
             }
 
-            .basketCardTexts {
-                width: 50%;
-                text-align: center;
+            .imgAndName {
+                display: flex;
+                align-items: center;
+                width: 20%;
+                gap: 10px;
+                position: relative;
+
+                .fa-xmark {
+                    position: absolute;
+                    left: 0;
+                    top: 10px;
+                    background-color: var(--adding-color);
+                    padding: 3px;
+                    border-radius: 100%;
+                    cursor: pointer;
+                    color: white;
+                    opacity: 0;
+                    transition: 0.5s;
+                }
+
+                img {
+                    width: 100px;
+                }
+            }
+
+            .newPrice {
+                width: 20%;
+
+                p {
+                    margin-left: 50px;
+                }
+
+                // text-align: center;
+            }
+
+            .quantity {
+                border: 1px solid black;
+                padding: 10px;
+                width: 10%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                p {
+                    font-size: 20px
+                }
+
+                ;
+
+                .arrows {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    i {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .total {
+                width: 20%;
+                display: flex;
+                justify-content: end;
+
+                p {
+                    margin-right: 50px;
+                }
+            }
+        }
+    }
+
+    .update {
+        padding: 20px 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 1px solid var(--adding-color);
+            color: var(--adding-color);
+            cursor: pointer;
+            background-color: transparent;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: var(--adding-color);
+                color: white;
+                border-color: transparent;
+                transition: 0.3s;
+            }
+        }
+    }
+
+    .coupon {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .input {
+            width: 40%;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+
+            button {
+                width: 150px;
+                border-radius: 5px;
+                height: 40px;
+                cursor: pointer;
+                background-color: transparent;
+                background-color: var(--adding-color);
+                color: white;
+                transition: 0.3s;
+                border: 1px solid transparent;
+
+                &:hover {
+                    background-color: white;
+                    transition: 0.3s;
+                    color: var(--adding-color);
+                    border: 1px solid var(--adding-color);
+                }
+            }
+
+            input {
+                height: 40px;
+                border-radius: 8px;
+                outline: none;
+                border: 1px solid gray;
+            }
+        }
+
+        .cartTotal {
+            border: 1px solid gray;
+            padding: 20px;
+            border-radius: 8px;
+
+            h3 {
+                padding: 20px 0;
+            }
+
+            width: 25%;
+            text-align: center;
+
+            .subtotal {
+                padding: 5px 0;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid gray;
+            }
+
+            button {
+                padding: 10px 20px;
+                margin-top: 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                background-color: transparent;
+                background-color: var(--adding-color);
+                color: white;
+                transition: 0.3s;
+                border: 1px solid transparent;
+
+                &:hover {
+                    background-color: white;
+                    transition: 0.3s;
+                    color: var(--adding-color);
+                    border: 1px solid var(--adding-color);
+                }
             }
         }
     }
